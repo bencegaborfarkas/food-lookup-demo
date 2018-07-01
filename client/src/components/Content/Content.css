@@ -1,0 +1,10 @@
+.Content{
+    grid-area: Content;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas:
+            "Search"
+            "Table";
+    grid-row-gap: 20px;
+}

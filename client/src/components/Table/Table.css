@@ -1,0 +1,27 @@
+.Table{
+    grid-area: Table;
+    background-color: white;
+}
+
+.THead > tr > th{
+    border-bottom-width: 1.5px;
+    border-bottom-style: solid;
+    border-bottom-color: lightgrey;
+    line-height: 1.5;
+    color: #0d71bb;
+    text-align: center;
+}
+
+.TBody > tr > td{
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: lightgrey;
+    line-height: 1.5;
+    color: #808080;
+    text-align: center;
+}
+
+.TFoot > tr > td{
+    color: lightgrey;
+    text-align: center;
+}
