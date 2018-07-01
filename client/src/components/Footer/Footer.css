@@ -1,0 +1,7 @@
+.Footer{
+    grid-area: Footer;
+    justify-self: center;
+    text-align: center;
+    color: lightgrey;
+    line-height: 0.5;
+}

@@ -1,7 +1,8 @@
 import React from "react";
-import Title from "../Title/Title";
 import "./App.css";
 import Client from "../../Client";
+import Footer from "../Footer/Footer";
+import Title from "../Title/Title";
 
 const MATCHING_ITEM_LIMIT = 10;
 
@@ -109,16 +110,7 @@ class App extends React.Component {
                         </table>
                     </div>
                 </div>
-                <div className="Footer">
-                    <footer>
-                        <p>
-                            <small><i>Author: Farkas Bence Gábor</i></small>
-                        </p>
-                        <p>
-                            <small><i>Date: 2018</i></small>
-                        </p>
-                    </footer>
-                </div>
+                <Footer author={"Farkas Bence Gábor"} date={"2018"}/>
             </div>
         ;
 
