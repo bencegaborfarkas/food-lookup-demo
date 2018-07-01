@@ -1,46 +1,28 @@
 import React from "react";
 import "./Search.css";
-import Client from "../../Client";
 
 class Search extends React.Component {
 
     constructor(props){
         super(props);
+        this.handleChange = this.handleChange.bind(this);
     }
 
-    search = (e) => {
+    handleChange(e){
+        this.props.onSearchValueChange(e.target.value);
+    }
 
-        const value = e.target.value;
-
-        this.setState({
-            searchValue: value
-        });
-
-        if (value === "") {
-            this.setState({
-                foods: [],
-                searchValue: ""
-            });
-        }
-        else {
-            // Fetch data
-            Client.search(value, foods => {
-                this.setState({
-                    foods: foods.slice(0, 25 /*matching item prop*/)
-                });
-            });
-        }
-
-    };
 
     render() {
+
+        const value = this.props.value;
 
         let html =
             <div className="Search">
                 <form action="">
                     <div>
                         <label htmlFor="Search" id="SearchLabel">Search: </label>
-                        {/*<input type="text" name="Search" id="Search" value={searchValue} onChange={this.search}/>*/}
+                        <input type="text" name="Search" id="Search" value={value} onChange={this.handleChange}/>
                     </div>
                 </form>
             </div>

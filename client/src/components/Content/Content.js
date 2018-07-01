@@ -31,12 +31,40 @@ class Content extends React.Component {
         });
     };
 
+    handleSearch = (val) => {
+
+        const value = val;
+
+        this.setState({
+            searchValue: value
+        });
+
+        if (value === "") {
+            this.setState({
+                foods: [],
+                searchValue: ""
+            });
+        }
+        else {
+            // Fetch data
+            Client.search(value, foods => {
+                this.setState({
+                    foods: foods.slice(0, MATCHING_ITEM_LIMIT)
+                });
+            });
+        }
+
+    };
+
     render() {
+
+        const value = this.state.searchValue;
+        const data = this.state.foods;
 
         let html =
             <div className="Content">
-                <Search/>
-                <Table/>
+                <Search value={value} onSearchValueChange={this.handleSearch}/>
+                <Table data={data}/>
             </div>
         ;
 
