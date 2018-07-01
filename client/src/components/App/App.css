@@ -1,0 +1,80 @@
+.App {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas:
+            ". Title ."
+            ". Content ."
+            ". Footer .";
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    font-family: Verdana;
+}
+
+.Title{
+    grid-area: Title;
+    color: #0d71bb;
+}
+
+.Content{
+    grid-area: Content;
+}
+
+#SearchLabel{
+    color: #0d71bb;
+    font-weight: bold;
+}
+
+#Search{
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #DDDDDD;
+}
+
+#Search:focus{
+    box-shadow: 0 0 5px rgba(13,113,187, 1);
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgba(13,113,187, 1);
+}
+
+.Table{
+    background-color: white;
+}
+
+.THead > tr > th{
+    border-bottom-width: 1.5px;
+    border-bottom-style: solid;
+    border-bottom-color: lightgrey;
+    line-height: 1.5;
+    color: #0d71bb;
+    text-align: center;
+}
+
+.TBody > tr > td{
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: lightgrey;
+    line-height: 1.5;
+    color: #808080;
+    text-align: center;
+}
+
+.TFoot > tr > td{
+    color: lightgrey;
+}
+
+.Footer{
+    grid-area: Footer;
+    justify-self: center;
+    text-align: center;
+    color: lightgrey;
+    line-height: 0.5;
+}
