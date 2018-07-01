@@ -1,4 +1,5 @@
 import React from "react";
+import Title from "../Title/Title";
 import "./App.css";
 import Client from "../../Client";
 
@@ -76,9 +77,7 @@ class App extends React.Component {
 
         let html =
             <div className="App">
-                <div className="Title">
-                    <h1>Food Lookup Demo Application</h1>
-                </div>
+                <Title title={ "Food Lookup Demo" }/>
                 <div className="Content">
                     <div className="Search">
                         <form action="">

@@ -13,12 +13,6 @@
     font-family: Verdana;
 }
 
-.Title{
-    grid-area: Title;
-    color: #0d71bb;
-    text-align: center;
-}
-
 .Content{
     grid-area: Content;
     display: grid;
