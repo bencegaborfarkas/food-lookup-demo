@@ -104,7 +104,7 @@ class App extends React.Component {
                             </tbody>
                             <tfoot className="TFoot">
                             <tr>
-                                <td colSpan="4"><small>(This table contains nutrition facts about the searched items)</small></td>
+                                <td colSpan="4"><small>(Note that the presented data consist of sample values, and may differ from real life nutritional rates!)</small></td>
                             </tr>
                             </tfoot>
                         </table>
